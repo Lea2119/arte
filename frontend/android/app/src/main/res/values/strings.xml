@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">arte</string>
+    <string name="title_activity_main">arte</string>
+    <string name="package_name">com.frontend</string>
+    <string name="custom_url_scheme">com.frontend</string>
+</resources>
