@@ -1,10 +1,6 @@
 <template>
 	<div>
-		<v-app-bar
-			v-if="!props.isIphone15"
-			scroll-behavior="collapse"
-			color="#e4012c"
-		>
+		<v-app-bar v-if="!props.isIphone15" color="#e4012c">
 			<template v-slot:prepend>
 				<v-app-bar-nav-icon
 					variant="text"
@@ -13,17 +9,13 @@
 			</template>
 		</v-app-bar>
 		<v-navigation-drawer
-			class="nav-drawer w-25"
+			class="nav-drawer d-flex justify-center w-25"
 			style="background-color: #e4012c"
 			v-model="drawer"
 			location="left"
 			temporary
 		>
-			<v-list
-				v-for="(item, index) in filteredItems"
-				:key="index"
-				density="compact"
-			>
+			<v-list v-for="(item, index) in filteredItems" :key="index">
 				<v-list-item
 					style="color: white"
 					:prepend-icon="item.icon"
@@ -31,13 +23,6 @@
 					:value="item.value"
 				></v-list-item>
 			</v-list>
-		</v-navigation-drawer>
-		<v-navigation-drawer
-			class="nav-drawer w-25"
-			v-model="drawer"
-			location="left"
-			temporary
-		>
 		</v-navigation-drawer>
 	</div>
 </template>
